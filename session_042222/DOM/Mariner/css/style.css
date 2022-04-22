@@ -1,0 +1,15 @@
+main {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: space-evenly;
+}
