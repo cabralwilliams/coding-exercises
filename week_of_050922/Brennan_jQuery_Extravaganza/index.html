@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <title>Playground</title>
+</head>
+<body>
+  <header class="text-center">
+    <button type="button" class="btn btn-light" id="modeToggle">Use Dark Mode</button>
+    <h1>My Faves 😍</h1>
+  </header>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-4 sports">
+        <h3>Sports</h3>
+        <ol>
+          <li>Football</li>
+          <li class="random">Hockey</li>
+          <li>Competitive Skydiving Polo</li>
+        </ol>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 humans">
+        <h3>Humans</h3>
+        <ol>
+          <li>Mom</li>
+          <li>Dad</li>
+          <li>My Students</li>
+          <li>Shakira</li>
+          <li class="random">Ryan Reynolds 🥵</li>
+        </ol>
+      </div>      
+      <div class="col-12 col-md-6 col-lg-4 clothing">
+        <h3>Clothing</h3>
+        <ol>
+          <li>Sweaters 
+            <span id="superspan">Awesome!</span>
+          </li>
+          <li>Slippers</li>
+          <li class="random">Hats</li>
+          <li>Socks</li>
+          <li class="random">Undies</li>
+        </ol>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 countries">
+        <h3>Countries</h3>
+        <ol>
+          <li class="random">Brazil </li>
+          <li>USA </li>
+          <li>Madagascar </li>
+          <li>Djibouti </li>
+        </ol>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 foods">
+        <h3>Foods</h3>
+        <ol>
+          <li id="stuff">Pizza</li>
+          <li>Sushi</li>
+          <li>Steak</li>
+          <li>Raw unseasoned sauerkraut root</li>
+        </ol>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 movies">
+        <h3>Movies</h3>
+        <ol>
+          <li>Finding Nemo</li>
+          <li>Moana</li>
+          <li>Tangled</li>
+          <li>SAW III</li>          
+        </ol>
+        <!--Notice that this is a row inside another row. How fun!-->
+        <div class="row mx-1 text-center">
+          <div class="col-md-3 col-sm-6" style="border: 1px solid black">🐠</div>
+          <div class="col-md-3 col-sm-6" style="border: 1px solid black">🏝️</div>
+          <div class="col-md-3 col-sm-6" style="border: 1px solid black">👩</div>
+          <div class="col-md-3 col-sm-6" style="border: 1px solid black">🔪</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./script2.js"></script>
+</body>
+</html>
+
+<style>
+  #stuff {
+    background: red !important
+  }
+
+  header {
+    padding:2rem; 
+    margin: 1rem 2rem 0 2rem; 
+    border: 3px solid green; 
+    border-radius: 1rem; 
+    background: lightgreen; 
+    position:relative;
+  }
+
+  #modeToggle {
+    position: absolute; 
+    top: 2.5rem;
+    left: 1rem;
+  }
+
+  ol {
+    padding: 0;
+  }
+
+  h3 {
+    cursor: pointer;
+    border: 5px solid royalblue;
+    border-radius: 2rem 2rem 0 0;
+    padding: .5rem;
+    margin-bottom: 0;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  h3:hover {
+    color: crimson !important;
+    background: #ddd;
+  }
+
+  .bg-dark h3:hover {
+    color: pink !important;
+    background: #555;
+  }
+</style>
