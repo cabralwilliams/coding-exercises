@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Only Numbers Please</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <div class="d-flex flex-column align-items-center">
+        <h1 class="text-dark">Only Numbers Please</h1>
+        <p class="col-12 col-md-10">
+            Let's get to the point.  I only want <b class="text-danger">objects that contain only numbers as properties</b>, and 
+            I want to be able to save and delete them from browser storage.  That is your mission.  Stop wasting time.
+        </p>
+        <div class="col-12 col-md-8 d-flex justify-content-center">
+            <button id="showMeObjects" class="btn btn-primary">Show Me Objects!</button>
+        </div>
+        <div class="col-12 col-md-10 d-flex flex-wrap justify-content-evenly">
+            <div class="col-12 col-md-5 d-flex flex-column align-items-center">
+                <h2 class="text-danger">
+                    Unaltered
+                </h2>
+                <div id="unaltered" class="text-danger"></div>
+            </div>
+            <div class="col-12 col-md-5 d-flex flex-column align-items-center">
+                <h2 class="text-primary">
+                    Numbers Only
+                </h2>
+                <div id="only_numbers" class="text-primary"></div>
+            </div>
+        </div>
+        <div class="col-12 col-md-10 d-flex flex-wrap justify-content-evenly">
+            <button class="btn btn-success" id="saveBtn">Save To Storage</button>
+            <button class="btn btn-primary" id="showBtn">Show Storage</button>
+            <button class="btn btn-danger" id="deleteBtn">Delete Storage</button>
+        </div>
+        <div class="d-flex justify-content-center col-12 col-md-10" id="storageId"></div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
