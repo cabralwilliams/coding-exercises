@@ -1,0 +1,14 @@
+{
+  "name": "week_of_053022",
+  "version": "1.0.0",
+  "description": "Exercises for the week of May 30, 2022",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Cabral Williams",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^28.1.0"
+  }
+}
