@@ -16,3 +16,4 @@
     * [Some Object Manipulation](https://github.com/cabralwilliams) - So far there are two exercises available, which already exceeds the over/under value of 1.  Can the list of object manipulation exercises extend to 3?  Almost certainly not.
 * Week of 5-30-2022
     * Object Oriented Programming and Testing - Relatedness
+    * Introduction to Express - SuperFriends

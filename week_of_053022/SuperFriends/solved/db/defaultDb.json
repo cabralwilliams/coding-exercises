@@ -1,0 +1,23 @@
+{
+    "heroes": [
+        {
+            "codeName": "Batman",
+            "secretIdentity": "Bruce Wayne",
+            "gender": "male",
+            "heroId": 1
+        },
+        {
+            "codeName": "Wonder Woman",
+            "secretIdentity": "Diana Prince",
+            "gender": "female",
+            "heroId": 2
+        },
+        {
+            "codeName": "Superman",
+            "secretIdentity": "Clark Kent",
+            "gender": "male",
+            "heroId": 3
+        }
+    ],
+    "heroCount": 3
+}
