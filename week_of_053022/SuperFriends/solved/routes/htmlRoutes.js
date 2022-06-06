@@ -2,6 +2,7 @@
 const path = require('path');
 const router = require('express').Router();
 const { HTML, DbQuery } = require('../utils');
+let heroDB;
 
 router.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../static/index.html"));
@@ -13,13 +14,15 @@ router.get("/addHero", (req, res) => {
 });
 
 router.get("/friends", (req, res) => {
-    const heroDB = require('../db/heroDB.json');
+    heroDB = require('../db/heroDB.json');
+    console.log(heroDB);
     const htmlPage =HTML.writeFriends(heroDB.heroes);
+    heroDB = null;
     res.send(htmlPage);
 });
 
 router.get("/friends/:heroId", (req, res) => {
-    const heroDB = require('../db/heroDB.json');
+    heroDB = require('../db/heroDB.json');
     const heroArray = heroDB.heroes;
     const hero = DbQuery.getHeroById(heroArray, parseInt(req.params.heroId));
     if(hero === null) {

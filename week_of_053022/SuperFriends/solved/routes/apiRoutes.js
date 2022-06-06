@@ -3,24 +3,30 @@ const fs = require('fs');
 const path = require('path');
 const router = require('express').Router();
 //Import the heroDB
+let heroDB;
+let maleHeroes, femaleHeroes;
 
 const { DbQuery } = require('../utils');
 
 router.get("/", (req, res) => {
+    heroDB = require('../db/heroDB.json');
     res.json(heroDB.heroes);
 });
 
 router.get("/male", (req, res) => {
-    const maleHeroes = heroDB.heroes.filter(hero => hero.gender === "male");
+    heroDB = require('../db/heroDB.json');
+    maleHeroes = heroDB.heroes.filter(hero => hero.gender === "male");
     res.json(maleHeroes);
 });
 
 router.get("/female", (req, res) => {
-    const femaleHeroes = heroDB.heroes.filter(hero => hero.gender === "female");
+    heroDB = require('../db/heroDB.json');
+    femaleHeroes = heroDB.heroes.filter(hero => hero.gender === "female");
     res.json(femaleHeroes);
 });
 
 router.get("/info", (req, res) => {
+    heroDB = require('../db/heroDB.json');
     console.log(heroDB);
     res.json(heroDB);
 });
@@ -30,7 +36,7 @@ router.post("/", (req, res) => {
     if(!req.body.codeName || !req.body.secretIdentity) {
         res.status(400).json({ message: "You must provide a code name and secret identity for the hero."});
     }
-    const heroDB = require('../db/heroDB.json');
+    heroDB = require('../db/heroDB.json');
     const newHero = req.body;
     newHero.heroId = heroDB.heroCount + 1;
     const updatedHeroes = heroDB;
@@ -51,7 +57,7 @@ router.put('/friends/:heroId', (req, res) => {
     if(!req.body.codeName || !req.body.secretIdentity) {
         res.status(400).json({ message: "You must provide a code name and secret identity for the hero."});
     }
-    const heroDB = require('../db/heroDB.json');
+    heroDB = require('../db/heroDB.json');
     const updatedHero = req.body;
     updatedHero.heroId = parseInt(req.params.heroId);
     const dbQueryResult = DbQuery.findByIdAndUpdate(heroDB.heroes,parseInt(req.params.heroId),updatedHero);
@@ -67,7 +73,7 @@ router.put('/friends/:heroId', (req, res) => {
 });
 
 router.delete("/friends/:heroId", (req, res) => {
-    const heroDB = require('../db/heroDB.json');
+    heroDB = require('../db/heroDB.json');
     const dbQueryResult = DbQuery.findByIdAndDelete(heroDB.heroes,parseInt(req.params.heroId));
     heroDB.heroes = dbQueryResult.heroes;
     fs.writeFileSync(path.join(__dirname, '../db/heroDB.json'), JSON.stringify(heroDB,null,4), err => {
@@ -86,6 +92,7 @@ router.delete("/friends/:heroId", (req, res) => {
 
 router.post("/reset", (req, res) => {
     const resetDB = require('../db/defaultDb.json');
+    console.log(resetDB);
     fs.writeFileSync(path.join(__dirname, '../db/heroDB.json'), JSON.stringify(resetDB,null,4), err => {
         if(err) {
             console.error(err);
