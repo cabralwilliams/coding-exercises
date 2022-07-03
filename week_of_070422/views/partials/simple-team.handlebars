@@ -1,0 +1,10 @@
+<div class="col-12 col-md-4">
+    <a href="/teams/{{id}}">{{team_name}}</a>
+    {{#if hasMembers}}
+        <ul>
+            {{#each metahumans}}
+                {{> team-member }}
+            {{/each}}
+        </ul>
+    {{/if}}
+</div>

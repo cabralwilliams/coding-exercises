@@ -17,3 +17,5 @@
 * Week of 5-30-2022
     * Object Oriented Programming and Testing - Relatedness
     * Introduction to Express - SuperFriends
+* Week of 7-04-2022
+    * Example of a Full Stack application (very simple) using Handlebars for the view template
