@@ -1,0 +1,19 @@
+<div class="d-flex flex-column align-items-center">
+    <h2>{{teamData.team_name}}</h2>
+    <p>(Fighting under {{teamData.user.username}})</p>
+    <p class="col-10 col-md-8">Welcome to the team page for {{teamData.team_name}}!  Feel 
+        free to click on the 
+        {{#if teamData.are_heroic}}
+            heroes
+        {{/if}}
+        {{#unless teamData.are_heroic}}
+            villains
+        {{/unless}} 
+        to read more about them!
+    </p>
+    <div class="d-flex flex-wrap col-10 col-md-8">
+        {{#each teamData.metahumans}}
+            {{> teammates}}
+        {{/each}}
+    </div>
+</div>

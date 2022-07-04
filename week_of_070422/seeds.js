@@ -87,21 +87,25 @@ const metahumans = [
     {
         "code_name": "The Blur",
         "secret_identity": "William Swift",
+        "biography": "The man who would become The Blur, William Swift, was born as a rather pedestrian runner.  After losing many races to elementary aged children once he reached early adulthood, he was blessed by the god of Speed with the ability to run like the wind, the ability to defeat all elementary aged children.",
         "team_id": 1
     },
     {
         "code_name": "Eagle Woman",
         "secret_identity": "Laura Sky",
+        "biography": "Laura Sky fell from the grasp of a parent while being held near the top of one of the world's highest skyscrapers.  She was rescued by an eagle, who conferred upon her the ability to fly.  Then, she devoured the entirety of the convocation of eagles, gaining their strengths in the process.",
         "team_id": 2
     },
     {
         "code_name": "Kaiser Concrete",
         "secret_identity": null,
+        "biography": null,
         "team_id": 4
     },
     {
         "code_name": "Ultra Ion",
         "secret_identity": null,
+        "biography": null,
         "team_id": 3
     }
 ];

@@ -24,6 +24,10 @@ Metahuman.init(
             type: DataTypes.STRING,
             allowNull: true
         },
+        biography: {
+            type: DataTypes.TEXT,
+            allowNull: true
+        },
         team_id: {
             type: DataTypes.INTEGER,
             allowNull: false,

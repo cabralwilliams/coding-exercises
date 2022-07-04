@@ -1,0 +1,10 @@
+<div class="d-flex flex-column">
+    <h2>{{metahuman.code_name}}</h2>
+    {{#if metahuman.hasSecretIdentity}}
+        <h3>Secret Identity: {{metahuman.secret_identity}}</h3>
+    {{/if}}
+    {{#if metahuman.hasBiography}}
+        <h3>Biography</h3>
+        <p>{{metahuman.biography}}</p>
+    {{/if}}
+</div>
