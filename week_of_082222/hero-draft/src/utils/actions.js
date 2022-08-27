@@ -1,0 +1,8 @@
+export const SHUFFLE_TEAMS = "SHUFFLE_TEAMS";
+export const SHUFFLE_HEROES = "SHUFFLE_HEROES";
+export const SELECT_HERO = "SELECT_HERO";
+export const SET_CURRENT_TEAM = "SET_CURRENT_TEAM";
+export const RESET_HEROES = "RESET_HEROES";
+export const RESET_TEAMS = "RESET_TEAMS";
+export const LOAD_SAVED_STATE = "LOAD_SAVED_STATE";
+export const TOGGLE_DRAFT = "TOGGLE_DRAFT";
